@@ -1,4 +1,4 @@
 
 module.exports = {
-  url: 'mongodb://admin:admin@novus.modulusmongo.net:27017/h8ogopUs'
+  url: 'mongodb://admin:admin@troup.mongohq.com:10025/Racr'
 }
