@@ -7,7 +7,7 @@ designated race tracks.
 
 # Components needed:
 
-*Node.Js http://nodejs.org/
-*npm https://npmjs.org/
-*MonogDB http://www.mongodb.org/
-*Bower http://bower.io/
+- Node.Js http://nodejs.org/
+- npm https://npmjs.org/
+- MonogDB http://www.mongodb.org/
+- Bower http://bower.io/
