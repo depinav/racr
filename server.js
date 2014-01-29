@@ -6,7 +6,8 @@ var database  = require('./config/database');
 
 var app       = express();
 
-mongoose.connect(database.url);
+// Make sure to use database.url for deployment
+mongoose.connect(database.local);
 
 app.configure( function() {
   app.set('port', process.env.PORT || 8080);
