@@ -11,4 +11,11 @@ describe('Race api', function() {
       .get('/api/races')
       .expect(200, done);
   });
+
+  it('should return a single race', function(done) {
+
+    request(app)
+      .get('/api/races/52ebdd082f168100004b83a6')
+      .expect(200, done);
+  });
 });

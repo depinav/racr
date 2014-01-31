@@ -13,6 +13,17 @@ module.exports = function(app) {
     });
   });
 
+  // Get single race
+  app.get('/api/races/:race_id', function(req, res) {
+
+    Race.find({ _id : req.params.race_id }, function(err, race) {
+
+      sendErr(err);
+
+      res.json(race);
+    });
+  });
+
   // Create a new race
   app.post('/api/races', function(req, res) {
 
@@ -21,8 +32,6 @@ module.exports = function(app) {
     Race.create(
     { 
       name : bdy.raceName, 
-      location : bdy.raceLoc, 
-      track : bdy.raceTrack, 
       type : bdy.raceType, 
       date : bdy.raceDate 
     },
