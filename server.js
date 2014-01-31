@@ -6,7 +6,6 @@ var database  = require('./config/database');
 
 var app       = express();
 
-
 app.configure( function() {
   app.set('port', process.env.PORT || 8080);
   app.use(express.static(__dirname + '/public'));
@@ -28,3 +27,5 @@ require('./app/controllers/raceController.js')(app);
 
 app.listen(app.get('port'));
 console.log('App listening on port ' + app.get('port'));
+
+module.exports = app;
