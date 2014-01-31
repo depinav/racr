@@ -20,3 +20,5 @@ there are only two of them:
 - run `$ npm install`
 - run `$ node server.js`
 - open your browser of choice to localhost:8080
+
+https://www.codeship.io/projects/5a84eb20-6cbd-0131-87c2-52b9435808d1/status
