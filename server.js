@@ -6,8 +6,6 @@ var database  = require('./config/database');
 
 var app       = express();
 
-// Make sure to use database.url for deployment
-mongoose.connect(database.local);
 
 app.configure( function() {
   app.set('port', process.env.PORT || 8080);
@@ -17,6 +15,13 @@ app.configure( function() {
   app.use(connect.json())
   app.use(express.methodOverride());
 });
+
+// Make sure to use database.url for deployment
+if(app.get('port') === 8080) {
+  mongoose.connect(database.local);
+} else {
+  mongoose.connect(database.url);
+}
 
 require('./app/controllers/todoController.js')(app);
 require('./app/controllers/raceController.js')(app);
