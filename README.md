@@ -20,3 +20,7 @@ there are only two of them:
 - run `$ npm install`
 - run `$ node server.js`
 - open your browser of choice to localhost:8080
+
+Authors
+- Victor DePina
+- Peter Brejcha
