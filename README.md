@@ -24,3 +24,5 @@ there are only two of them:
 Authors
 - Victor DePina
 - Peter Brejcha
+
+https://www.codeship.io/projects/5a84eb20-6cbd-0131-87c2-52b9435808d1/status
