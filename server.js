@@ -19,6 +19,7 @@ app.configure( function() {
 });
 
 require('./app/controllers/todoController.js')(app);
+require('./app/controllers/raceController.js')(app);
 
 app.listen(app.get('port'));
 console.log('App listening on port ' + app.get('port'));
