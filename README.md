@@ -11,3 +11,10 @@ designated race tracks.
 - [npm](https://npmjs.org/)
 - [MonogDB](http://www.mongodb.org/)
 - [Bower](http://bower.io/)
+
+## Running the App locally
+
+The steps to get this app running locally are pretty easy,
+there are only two of them:
+- git clone into your dir of choice
+- run '$ npm install'
