@@ -18,7 +18,14 @@ module.exports = function(app) {
 
     var bdy = req.body;
 
-    Race.create({ name : bdy.raceName, location : bdy.raceLoc, type : bdy.raceType, date : bdy.raceDate },
+    Race.create(
+    { 
+      name : bdy.raceName, 
+      location : bdy.raceLoc, 
+      track : bdy.raceTrack, 
+      type : bdy.raceType, 
+      date : bdy.raceDate 
+    },
     function(err, race) {
 
       sendErr(res, err);
@@ -45,6 +52,17 @@ module.exports = function(app) {
 
         res.json(races);
       });
+    });
+  });
+
+  app.get('/api/races/drop', function(req, res) {
+
+    Race.collection.drop(function(err) {
+
+      sendErr(err);
+
+      console.log("Collection Dropped");
+      res.send('Collection Successfully dropped.');
     });
   });
 
