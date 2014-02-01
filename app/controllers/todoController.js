@@ -3,7 +3,7 @@ var Todo    = require('../models/todo');
 module.exports = function(app) {
 
   // Get all todos
-/*  app.get('/api/todos', function(req, res) {
+  app.get('/api/todos', function(req, res) {
 
     Todo.find(function(err, todos) {
 
@@ -11,7 +11,7 @@ module.exports = function(app) {
 
       res.json(todos);
     });
-  }); */
+  });
 
   // Create new todo
   app.post('/api/todos', function(req, res) {
