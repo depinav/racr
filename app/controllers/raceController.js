@@ -78,7 +78,7 @@ module.exports = function(app) {
   // Home route
   app.get('/', function(req, res) {
 
-    res.sendfile('./public/index.html');
+    res.sendfile('./public/pages/main.html');
   });
 }
 
