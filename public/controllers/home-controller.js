@@ -1,4 +1,4 @@
 racrApp.controller('Home', ['$scope', function($scope) {
 
-  $scope.test = "test stuff";
+  $scope.test = "I'm the home controller!";
 }]);
