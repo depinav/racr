@@ -24,3 +24,7 @@ racrApp.controller('race.details', ['$scope', '$http', '$routeParams', function(
 
 	});
 }]);
+
+racrApp.controller('race.create', ['$scope', '$http', '$location', function($scope, $http, $location){
+
+}]);
