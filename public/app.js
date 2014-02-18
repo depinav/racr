@@ -9,6 +9,10 @@ racrApp.config(['$routeProvider', function($routeProvider) {
 				templateUrl : 'pages/templates/races/_racesIndex.html',
 				controller  : 'race.index'
 			})
+			.when('/races/:id',{
+				templateUrl : 'pages/templates/races/_racesDetails.html',
+				controller  : 'race.details'
+			})
 			.when('/tracks', {
 				templateUrl : 'pages/templates/_tracks.html',
 				controller  : 'Track'
