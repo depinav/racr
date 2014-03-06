@@ -15,12 +15,20 @@ racrApp.controller('race.index', ['$scope', '$http', '$location', function($scop
 }]);
 
 racrApp.controller('race.details', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams){
-	$http({
-		method: 'GET',
-		url: '/api/races/' + $routeParams.id
-	}).success(function(data, status, headers, config){
-		$scope.race = data[0];
-	}).error(function(data, status, headers, config){
+    $http.get('/api/races/' + $routeParams.id)
+        .success(function(data, status, headers, config){
+		    $scope.race = data[0];
+	    }).error(function(data, status, headers, config){
+	    });
+}]);
 
-	});
+racrApp.controller('race.create', ['$scope', '$http', '$location', function($scope, $http, $location){
+
+    $scope.createRace = function (race) {
+        $http.post('/api/races', race)
+            .success(function(data, status, headers, config){
+                $location.url('/races');
+            }).error(function(data, status, headers, config){
+            });
+    }
 }]);
