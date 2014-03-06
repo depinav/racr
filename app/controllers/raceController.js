@@ -31,9 +31,9 @@ module.exports = function(app) {
 
     Race.create(
     { 
-      name : bdy.raceName, 
-      type : bdy.raceType, 
-      date : bdy.raceDate 
+      name : bdy.name,
+      type : bdy.type,
+      date : bdy.date
     },
     function(err, race) {
 

@@ -13,7 +13,7 @@ racrApp.config(['$routeProvider', function($routeProvider) {
 				templateUrl : 'pages/templates/races/_racesDetails.html',
 				controller  : 'race.details'
 			})
-			.when('/races/create', {
+			.when('/createRace', {
 				templateUrl : 'pages/templates/races/_racesCreate.html',
 				controller  : 'race.create'
 			})
