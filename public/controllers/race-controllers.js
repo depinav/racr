@@ -14,12 +14,22 @@ racrApp.controller('race.index', ['$scope', '$http', '$location', function($scop
 	}
 }]);
 
-racrApp.controller('race.details', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams){
+racrApp.controller('race.details', ['$scope', '$http', '$routeParams', '$location', function($scope, $http, $routeParams, $location){
     $http.get('/api/races/' + $routeParams.id)
         .success(function(data, status, headers, config){
 		    $scope.race = data[0];
 	    }).error(function(data, status, headers, config){
 	    });
+
+    $scope.deleteRace = function(race){
+        $http.delete('/api/races/' + race._id)
+            .success(function(data){
+                $location.url('/races');
+            })
+            .error(function(){
+
+            });
+    };
 }]);
 
 racrApp.controller('race.create', ['$scope', '$http', '$location', function($scope, $http, $location){
