@@ -8,13 +8,15 @@
 			<tr>
 				<th scope="col">Name</th>
 				<th scope="col">Type</th>
-				<th scope="col">Date</th>
+                <th scope="col">Track</th>
+                <th scope="col">Date</th>
 			</tr>
 		</thead>
 		<tbody ng-repeat="race in races" ng-click="findRace(race)">
 			<tr>
 				<td>{{race.name}}</td>
 				<td>{{race.type}}</td>
+                <td>{{race.track}}</td>
 				<td>{{race.date}}</td>
 			</tr>
 		</tbody>

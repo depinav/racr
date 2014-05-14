@@ -1,0 +1,22 @@
+<!-- Template for the Tracks Index view -->
+<div>
+    <div>
+        <a ng-href="#createTrack">Create Track</a>
+    </div>
+    <table class="table table-striped table-hover">
+        <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Type</th>
+            <th scope="col">Length</th>
+        </tr>
+        </thead>
+        <tbody ng-repeat="track in tracks" ng-click="findTrack(track)">
+        <tr>
+            <td>{{track.name}}</td>
+            <td>{{track.type}}</td>
+            <td>{{track.length}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

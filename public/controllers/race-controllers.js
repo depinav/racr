@@ -34,6 +34,17 @@ racrApp.controller('race.details', ['$scope', '$http', '$routeParams', '$locatio
 
 racrApp.controller('race.create', ['$scope', '$http', '$location', function($scope, $http, $location){
 
+    $http({
+        method: 'GET',
+        url: '/api/tracks'
+    }).success(function (data, status, headers, config) {
+        console.log(data);
+        $scope.tracks = data;
+    }).error(function (data, status, headers, config) {
+        console.log('error retrieving tracks', data);
+        //handle the errors
+    });
+
     $scope.createRace = function (race) {
         $http.post('/api/races', race)
             .success(function(data, status, headers, config){

@@ -33,7 +33,8 @@ module.exports = function(app) {
     { 
       name : bdy.name,
       type : bdy.type,
-      date : bdy.date
+      date : bdy.date,
+      track: bdy.track
     },
     function(err, race) {
 

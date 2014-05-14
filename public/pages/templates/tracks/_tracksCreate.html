@@ -1,0 +1,17 @@
+<div>Create Track</div>
+
+<form role="form">
+    <div class="form-group">
+        <label for="track-name">Track Name</label>
+        <input type="text" class="form-control" id="track-name" ng-model="track.name" placeholder="Track name">
+    </div>
+    <div class="form-group">
+        <label for="track-type">Track Type</label>
+        <input type="text" class="form-control" id="track-type" ng-model="track.type" placeholder="Track type">
+    </div>
+    <div class="form-group">
+        <label for="track-length">Track Length (miles)</label>
+        <input type="number" class="form-control" id="track-length" ng-model="track.length">
+    </div>
+    <button type="submit" class="btn btn-default" ng-click="createTrack(track)">Submit</button>
+</form>

@@ -13,5 +13,9 @@
         <label for="race-date">Race Date</label>
         <input type="date" class="form-control" id="race-date" ng-model="race.date">
     </div>
+    <div class="form-group" ng-show="tracks.length > 0">
+        <label for="race-track">Track</label>
+        <select ng-model="race.track" ng-options="t.name for t in tracks"></select>
+    </div>
     <button type="submit" class="btn btn-default" ng-click="createRace(race)">Submit</button>
 </form>
