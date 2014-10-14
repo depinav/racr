@@ -22,7 +22,6 @@ if(app.get('port') === 8080) {
   mongoose.connect(database.url);
 }
 
-require('./app/controllers/todoController.js')(app);
 require('./app/controllers/raceController.js')(app);
 
 app.listen(app.get('port'));
