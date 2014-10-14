@@ -1,10 +1,8 @@
-<div>
-    <a ng-href="#races">Back to Races</a>
+<div class="btn-group">
+    <a class="btn btn-info" ng-href="#races">Back to Races</a>
+    <a class="btn btn-danger" href="#" ng-click="deleteRace(race)">Delete Race</a>
 </div>
-<div>
-    <a href="#" ng-click="deleteRace(race)">Delete Race</a>
-</div>
-<div>
+<div class="container">
 	<ol>
 		<li>{{race.name}}</li>
 		<li>{{race.type}}</li>
