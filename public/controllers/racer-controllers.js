@@ -1,4 +1,4 @@
-racrApp.controller('Racer', ['$scope', function($scope) {
+racrApp.controller('RacerCtrl', ['$scope', function($scope) {
 
   $scope.test = "I'm the Racer controller!";
 }]);

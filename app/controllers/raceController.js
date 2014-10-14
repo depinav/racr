@@ -64,17 +64,6 @@ module.exports = function(app) {
         });
     });
 
-    app.get('/api/races/drop', function(req, res) {
-
-        Race.collection.drop(function(err) {
-
-            sendErr(err);
-
-            console.log("Collection Dropped");
-            res.send('Collection Successfully dropped.');
-        });
-    });
-
     // Home route
     app.get('/', function(req, res) {
 

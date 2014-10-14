@@ -11,7 +11,7 @@
 				<th scope="col">Date</th>
 			</tr>
 		</thead>
-		<tbody ng-repeat="race in races" ng-click="findRace(race)">
+		<tbody ng-repeat="race in racesViewModel.races" ng-click="findRace(race)">
 			<tr>
 				<td>{{race.name}}</td>
 				<td>{{race.type}}</td>

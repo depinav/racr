@@ -1,25 +1,20 @@
-racrApp.controller('race.index', ['$scope', '$http', '$location', function($scope, $http, $location) {
+racrApp.controller('Race.IndexCtrl', ['$scope', 'RaceService', function($scope, raceService) {
+    $scope.racesViewModel = {};
 
-    $http({
-        method: 'GET',
-        url: '/api/races'
-    }).success(function(data, status, headers, config){
-        $scope.races = data;
-    }).error(function(data, status, headers, config){
-        //handle ze errors
+    var races = raceService.query(function(){
+        console.log(races);
+        $scope.racesViewModel.races = races;
     });
 
-    $scope.findRace = function(race){
-        $location.url('/races/'+race._id);
-    }
+//    $scope.findRace = function(race){
+//        $location.url('/races/'+race._id);
+//    }
 }]);
 
-racrApp.controller('race.details', ['$scope', '$http', '$routeParams', '$location', function($scope, $http, $routeParams, $location){
-    $http.get('/api/races/' + $routeParams.id)
-        .success(function(data, status, headers, config){
-            $scope.race = data[0];
-        }).error(function(data, status, headers, config){
-        });
+racrApp.controller('Race.DetailsCtrl', ['$scope', '$routeParams', 'RaceService', function($scope, $routeParams, raceService){
+    $scope.raceViewModel = {};
+
+    $scope.raceViewModel.race = raceService.get({id: $routeParams.id});
 
     $scope.deleteRace = function(race){
         $http.delete('/api/races/' + race._id)
@@ -32,7 +27,7 @@ racrApp.controller('race.details', ['$scope', '$http', '$routeParams', '$locatio
     };
 }]);
 
-racrApp.controller('race.create', ['$scope', '$http', '$location', function($scope, $http, $location){
+racrApp.controller('Race.CreateCtrl', ['$scope', '$http', '$location', function($scope, $http, $location){
 
     $scope.createRace = function (race) {
         $http.post('/api/races', race)

@@ -1,33 +1,34 @@
-var racrApp = angular.module('racr', ['ngRoute']);
+var racrApp = angular.module('racr', ['ngRoute', 'ngResource']);
+
 racrApp.config(['$routeProvider', function($routeProvider) {
 	$routeProvider
 			.when('/', {
 				templateUrl : 'pages/templates/_home.html',
-				controller  : 'Home'
+				controller  : 'HomeCtrl'
 			})
 			.when('/races', {
 				templateUrl : 'pages/templates/races/_racesIndex.html',
-				controller  : 'race.index'
+				controller  : 'Race.IndexCtrl'
 			})
 			.when('/races/:id',{
 				templateUrl : 'pages/templates/races/_racesDetails.html',
-				controller  : 'race.details'
+				controller  : 'Race.DetailsCtrl'
 			})
 			.when('/createRace', {
 				templateUrl : 'pages/templates/races/_racesCreate.html',
-				controller  : 'race.create'
+				controller  : 'Race.CreateCtrl'
 			})
 			.when('/tracks', {
 				templateUrl : 'pages/templates/_tracks.html',
-				controller  : 'Track'
+				controller  : 'TrackCtrl'
 			})
 			.when('/teams', {
 				templateUrl : 'pages/templates/_teams.html',
-				controller  : 'Team'
+				controller  : 'TeamCtrl'
 			})
 			.when('/racers', {
 				templateUrl : 'pages/templates/_racers.html',
-				controller  : 'Racer'
+				controller  : 'RacerCtrl'
 			})
 
 }]);
