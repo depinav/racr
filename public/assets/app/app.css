@@ -1,6 +1,22 @@
 /* Dummy background-color */
 body {
-	background-color: #DDDDDD;
+	background-color: #ffffff;
+}
+
+/* "Nicer" nav color */
+.navbar.navbar-default.navbar-blue {
+    background-color: #4d71b3;
+}
+
+.navbar-text.inverse-color {
+    color: #FFFFFF;
+}
+.navbar-brand.inverse-color {
+    color: #FFFFFF;
+}
+
+.navbar-nav.inverse-color>.navbar-text{
+    color: #FFFFFF;
 }
 
 /* Following is to maintain the footer in Bootstrap 3.1 */
@@ -15,17 +31,18 @@ body {
   height: auto !important;
   height: 100%;
   /* Negative indent footer by it's height */
-  margin: 0 auto -60px;
+  margin: 0 auto -30px;
 }
 
 /* Set the fixed height of the footer here */
 #push,
 #footer {
-  height: 60px;
+  height: 30px;
 }
+
 #footer {
-  background-color: #222;
-  border-color: #080808;
+  background-color: #69dfb8;
+  border-color: #ffffff;
 }
 
 /* Lastly, apply responsive CSS fixes as necessary */
@@ -40,4 +57,4 @@ body {
 
 .table tr:hover{
   cursor: pointer;
-};
+}
