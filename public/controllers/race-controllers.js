@@ -1,12 +1,27 @@
 racrApp.controller('race.index', ['$scope', '$http', '$location', function($scope, $http, $location) {
+//    $scope = {
+//        filter: {
+//            predicate: 'name',
+//            reverse: ''
+//        }
+////        viewModel: {
+////        }
+//    };
 
+    $scope.filter = {
+        predicate: 'name',
+        reverse: ''
+    };
+
+    $scope.viewModel = {};
+
+    //TODO: Pull all $http calls into a race service; replace $http with $resource
     $http({
         method: 'GET',
         url: '/api/races'
     }).success(function(data, status, headers, config){
-        $scope.races = data;
+        $scope.viewModel.races = data;
     }).error(function(data, status, headers, config){
-        //handle ze errors
     });
 
     $scope.findRace = function(race){
@@ -27,7 +42,6 @@ racrApp.controller('race.details', ['$scope', '$http', '$routeParams', '$locatio
                 $location.url('/races');
             })
             .error(function(){
-
             });
     };
 }]);

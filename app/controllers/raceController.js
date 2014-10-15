@@ -64,6 +64,7 @@ module.exports = function(app) {
         });
     });
 
+    //Test method, not for production
     app.get('/api/races/drop', function(req, res) {
 
         Race.collection.drop(function(err) {
